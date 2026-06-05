@@ -6,6 +6,20 @@ AI environment.
 
 > **Note:** Files in subdirectories named *private* are not tracked by Git.
 
+## bin
+
+Scripts and tools for AI environment.
+
+## data
+
+Data for AI environment.
+
+### models
+
+Directory for AI model files in e.g. `gguf` format.
+
+> **Note:** Files in this directory except *.gitkeep* are ignored by Git.
+
 ## llama.cpp
 
 See [README](./llama.cpp/README.md).
