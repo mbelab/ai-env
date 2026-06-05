@@ -2,3 +2,7 @@
 
 # private directories (also in subdirectories)
 private/
+
+# content of data/models directory (except .gitkeep)
+data/models/*
+!data/models/.gitkeep
