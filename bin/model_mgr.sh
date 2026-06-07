@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Get model script
+# Model manager script
 
 
 # defines
@@ -12,7 +12,7 @@ DOWNLOAD_DIR='./data/models/'
 function show_help() {
     local script_name=$1
 
-    echo 'Get model script'
+    echo 'Model manager script'
     echo
     echo 'Usage: '$script_name' verb [options]'
     echo
