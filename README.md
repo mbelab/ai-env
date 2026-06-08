@@ -1,6 +1,6 @@
 # ai-env
 
-AI environment.
+Environment for local AI usage.
 
 **Maintainer:** [Michael Berghammer](mailto:info@mbelab.de)
 
