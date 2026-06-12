@@ -37,8 +37,7 @@ function show_help() {
 function list_models() {
     local model_list=$1
 
-    echo 'TODO'
-    echo
+    jq -r '.models | keys[]' $model_list
 }
 
 function show_model() {
