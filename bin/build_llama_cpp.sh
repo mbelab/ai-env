@@ -17,7 +17,7 @@ cd $LLAMA_DIR
 # prepare cmake build depending on option
 if [[ $option = '--vulkan' ]]
 then
-    cmake -B build -DGGML_VULKAN=ON
+    cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS -DGGML_VULKAN=ON
 else
     cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS
 fi
