@@ -14,13 +14,27 @@ Environment for local AI usage.
     $ git checkout main
     $ git submodule update --init --recursive
 
-    # Prepare system and build llama.cpp (OpenBLAS backend)
+    # Prepare system and build llama.cpp (default backend)
     $ ./bin/setup_system.sh
     $ ./bin/build_llama_cpp.sh
 
     # Download model, run model and open WebUI (Gemma 4 E2B)
     $ ./bin/model_mgr.sh download 'gemma-4-E2B-it-Q6_K'
     $ ./bin/run_webui.sh 'gemma-4-E2B-it-Q6_K'
+
+The default backend is OpenBLAS.
+Performance can be massively improved by using another backend.
+
+To use other backends, one can add the corresponding flag to scripts:
+
+- setup_system.sh
+- build_llama_cpp.sh
+- build_llama_cpp_py.sh
+
+Currently supported backends:
+
+- OpenBLAS (default)
+- Vulkan (`--vulkan`)
 
 ## environment
 
