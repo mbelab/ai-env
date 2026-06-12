@@ -7,6 +7,7 @@
 # defines
 MODEL_LIST='./data/model_list.json'
 LLAMA_BIN_DIR='./llama.cpp/build/bin'
+DEFAULT_IP='127.0.0.1'
 DEFAULT_PORT='8080'
 
 
@@ -27,4 +28,6 @@ then
 fi
 
 # run model as server
-$LLAMA_BIN_DIR/llama-server -m $model_file --port $port
+$LLAMA_BIN_DIR/llama-server \
+    -m $model_file \
+    --host $DEFAULT_IP --port $port

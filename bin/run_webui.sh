@@ -27,5 +27,8 @@ then
     port=$DEFAULT_PORT
 fi
 
-# run model as server
-$LLAMA_BIN_DIR/llama-server -m $model_file --jinja -c 0 --host $DEFAULT_IP --port $port
+# run model as server with WebUI
+$LLAMA_BIN_DIR/llama-server \
+    -m $model_file \
+    --jinja -c 0 --alias $model \
+    --host $DEFAULT_IP --port $port

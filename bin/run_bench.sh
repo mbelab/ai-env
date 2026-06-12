@@ -20,4 +20,5 @@ model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
 model_file=$model_path/$model'.'$model_type
 
 # run model in benchmark
-$LLAMA_BIN_DIR/llama-bench -m $model_file
+$LLAMA_BIN_DIR/llama-bench \
+    -m $model_file
