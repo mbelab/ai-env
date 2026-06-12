@@ -22,42 +22,41 @@ Environment for local AI usage.
     $ ./bin/model_mgr.sh download --model='gemma-4-E2B-it-Q6_K'
     $ ./bin/run_webui.sh 'gemma-4-E2B-it-Q6_K'
 
-## bin
+## environment
+
+### bin
 
 Scripts and tools for AI environment.
 
 | Script / Tool | Description |
 | ----- | ----- |
 | model_mgr.sh | Tool for simple model management. |
-| | |
 | run_cli.sh | Run model on CLI. |
 | run_webui.sh | Run model as server with WebUI. |
 | run_server.sh | Run model as server. |
 | run_bench.sh | Run model in benchmark. |
-| | |
 | build_llama_cpp.sh | Build llama.cpp for local usage. |
 | clean_llama_cpp.sh | Clean llama.cpp build. |
 | setup_system.sh | Setup script for system packages (apt). |
-| | |
 | build_llama_cpp_py.sh | Build llama-cpp-python for active virtual python env. |
 | setup_python_venv.sh | Setup virtual python env. |
 | clean_python_venv.sh | Clean virtual python env. |
 
-## data
+### data
 
 Data for AI environment.
 
-### model_list.json
+#### model_list.json
 
 A curated list of models, usable with scripts in *bin*.
 
-### models
+#### models
 
 Directory for AI model files in e.g. `gguf` format.
 
 > **Note:** Files in this directory except *.gitkeep* are ignored by Git.
 
-## llama.cpp
+### llama.cpp
 
 See [README](./llama.cpp/README.md).
 
