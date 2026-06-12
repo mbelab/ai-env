@@ -44,7 +44,6 @@ function show_model() {
     local model_list=$1
     local model=$2
 
-    echo $model
     jq -r --arg 'model' $model '.models[$model]' $model_list
 }
 
@@ -53,8 +52,11 @@ function download_model() {
     local model_path=$2
     local model=$3
 
-    echo 'TODO'
-    echo
+    local model_url=$(jq -r --arg 'model' $model '.models[$model].url' $model_list)
+    local model_type=$(jq -r --arg 'model' $model '.models[$model].type' $model_list)
+    local model_file=$model_path/$model'.'$model_type
+
+    wget -O $model_file $model_url
 }
 
 function remove_model() {
@@ -64,6 +66,7 @@ function remove_model() {
 
     local model_type=$(jq -r --arg 'model' $model '.models[$model].type' $model_list)
     local model_file=$model_path/$model'.'$model_type
+
     rm -r -f $model_file
 }
 
