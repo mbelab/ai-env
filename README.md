@@ -14,6 +14,10 @@ Scripts and tools for AI environment.
 
 Data for AI environment.
 
+### model_list.json
+
+A curated list of models, usable with scripts in *bin*.
+
 ### models
 
 Directory for AI model files in e.g. `gguf` format.
