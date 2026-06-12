@@ -13,7 +13,7 @@ option="$1"
 sudo apt-get update
 
 # install base packages
-sudo apt-get install -y gcc g++ gdb make cmake pkgconf
+sudo apt-get install -y gcc g++ gdb make cmake pkgconf jq wget
 
 # install base python packages
 sudo apt-get install -y python3 python3-venv python3-pip
