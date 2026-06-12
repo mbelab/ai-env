@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Run model in CLI script
+# Run model in benchmark script
 # mbelab
 
 
@@ -19,6 +19,6 @@ model="$1"
 model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
 model_file=$model_path/$model'.'$model_type
 
-# run model in CLI
-$LLAMA_BIN_DIR/llama-cli \
+# run model in benchmark
+$LLAMA_BIN_DIR/llama-bench \
     -m $model_file
