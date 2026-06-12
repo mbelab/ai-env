@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Model manager script
+# Model manager tool
 # mbelab
 
 
@@ -14,7 +14,7 @@ function show_help() {
     local model_list=$2
     local model_path=$3
 
-    echo 'Model manager script'
+    echo 'Model manager tool'
     echo
     echo 'Usage: '$script_name' verb [options]'
     echo
