@@ -3,6 +3,10 @@
 # private directories (also in subdirectories)
 private/
 
+# python and virtual environment directories (also in subdirectories)
+__pycache__/
+.venv/
+
 # content of data/models directory (except .gitkeep)
 data/models/*
 !data/models/.gitkeep
