@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 # Model manager script
+# mbelab
 
 
 # defines
@@ -57,7 +58,7 @@ function download_model() {
     local model_file=$model_path/$model'.'$model_type
 
     mkdir -p $model_path
-    wget -O $model_file $model_url
+    wget -q --show-progress -O $model_file $model_url
 }
 
 function remove_model() {
