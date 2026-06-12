@@ -15,6 +15,9 @@ sudo apt-get update
 # install base packages
 sudo apt-get install -y gcc g++ gdb make cmake pkgconf
 
+# install base python packages
+sudo apt-get install -y python3 python3-venv python3-pip
+
 # install OpenBLAS packages
 sudo apt-get install -y libopenblas-dev
 
