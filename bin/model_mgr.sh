@@ -16,17 +16,14 @@ function show_help() {
 
     echo 'Model manager tool'
     echo
-    echo 'Usage: '$script_name' verb [options]'
+    echo 'Usage: '$script_name' verb [model]'
     echo
     echo 'Verbs:'
     echo '    help               Show this help'
     echo '    list               List models'
-    echo '    show               Show model information'
-    echo '    download           Download model'
-    echo '    remove             Remove model'
-    echo
-    echo 'Options:'
-    echo '    -m, --model=NAME   Use model NAME'
+    echo '    show               Show [model] information'
+    echo '    download           Download [model]'
+    echo '    remove             Remove [model]'
     echo
     echo 'Model list: '$model_list
     echo 'Model path: '$model_path
@@ -81,25 +78,7 @@ model_list=$(realpath $MODEL_LIST)
 model_path=$(dirname $model_list)/'models'
 
 verb="$1"
-shift
-
-# handle options
-model=''
-
-for option in "$@"
-do
-    case $option in
-        '-m='*)
-            model=${option/'-m='/}
-            ;;
-        '--model='*)
-            model=${option/'--model='/}
-            ;;
-        *)
-            # no valid option
-            ;;
-    esac
-done
+model="$2"
 
 # handle verb
 case $verb in
