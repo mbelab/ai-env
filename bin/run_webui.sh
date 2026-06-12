@@ -27,6 +27,9 @@ then
     port=$DEFAULT_PORT
 fi
 
+# start browser with WebUI
+xdg-open 'http://'$DEFAULT_IP':'$port &
+
 # run model as server with WebUI
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file \
