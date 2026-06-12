@@ -44,8 +44,8 @@ function show_model() {
     local model_list=$1
     local model=$2
 
-    echo 'TODO'
-    echo
+    echo $model
+    jq -r --arg model "$model" '.models[$model]' "$model_list"
 }
 
 function download_model() {
@@ -82,10 +82,10 @@ model=''
 for option in "$@"
 do
     case $option in
-        '-m')
+        '-m='*)
             model=${option/'-m='/}
             ;;
-        '--model')
+        '--model='*)
             model=${option/'--model='/}
             ;;
         *)
