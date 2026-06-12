@@ -17,6 +17,8 @@ model_path=$(dirname $model_list)/'models'
 
 model="$1"
 port="$2"
+shift
+shift
 
 # handle model and port
 model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
@@ -34,4 +36,5 @@ xdg-open 'http://'$DEFAULT_IP':'$port &
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file \
     --jinja -c 0 --alias $model \
-    --host $DEFAULT_IP --port $port
+    --host $DEFAULT_IP --port $port \
+    "$@"
