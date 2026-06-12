@@ -5,12 +5,13 @@
 
 # defines
 MODEL_LIST='./data/model_list.json'
-DOWNLOAD_DIR='./data/models/'
 
 
 # functions
 function show_help() {
     local script_name=$1
+    local model_list=$2
+    local model_path=$3
 
     echo 'Model manager script'
     echo
@@ -18,13 +19,16 @@ function show_help() {
     echo
     echo 'Verbs:'
     echo '    help               Show this help'
-    echo '    list               List models in '$MODEL_LIST
+    echo '    list               List models'
     echo '    show               Show model information'
-    echo '    download           Download model to '$DOWNLOAD_DIR
-    echo '    remove             Remove model from '$DOWNLOAD_DIR
+    echo '    download           Download model'
+    echo '    remove             Remove model'
     echo
     echo 'Options:'
     echo '    -m, --model=NAME   Use model NAME'
+    echo
+    echo 'Model list: '$model_list
+    echo 'Model path: '$model_path
     echo
     echo '(c) mbelab'
     echo
@@ -47,14 +51,16 @@ function show_model() {
 
 function download_model() {
     local model_list=$1
-    local model=$2
+    local model_path=$2
+    local model=$3
 
     echo 'TODO'
     echo
 }
 
 function remove_model() {
-    local model=$1
+    local model_path=$2
+    local model=$3
 
     echo 'TODO'
     echo
@@ -64,6 +70,9 @@ function remove_model() {
 # script
 script=$(realpath $BASH_SOURCE)
 script_name=$(basename $script)
+
+model_list=$(realpath $MODEL_LIST)
+model_path=$(dirname $model_list)/'models'
 
 verb="$1"
 shift
@@ -89,24 +98,21 @@ done
 # handle verb
 case $verb in
     'list')
-        list_models $MODEL_LIST
-        exit 0
+        list_models $model_list
         ;;
     'show')
-        show_model $MODEL_LIST $model
-        exit 0
+        show_model $model_list $model
         ;;
     'download')
-        download_model $MODEL_LIST $model
-        exit 0
+        download_model $model_list $model_path $model
         ;;
     'remove')
-        remove_model $model
-        exit 0
+        remove_model $model_path $model
         ;;
     *)
         # no valid verb / help
-        show_help $script_name
-        exit 0
+        show_help $script_name $model_list $model_path
         ;;
 esac
+
+exit 0
