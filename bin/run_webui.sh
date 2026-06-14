@@ -16,8 +16,6 @@ model_list=$(realpath $MODEL_LIST)
 model_path=$(dirname $model_list)/'models'
 
 model="$1"
-port="$2"
-shift
 shift
 
 # handle model
@@ -30,19 +28,13 @@ then
     exit 2  # no such file or directory
 fi
 
-# handle port
-if [ -z $port ]
-then
-    port=$DEFAULT_PORT
-fi
-
 # start browser with WebUI
-xdg-open 'http://'$DEFAULT_IP':'$port &
+xdg-open 'http://'$DEFAULT_IP':'$DEFAULT_PORT &
 
 # run model as server with WebUI
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file -c 0 \
     --tools all \
     --jinja --alias $model \
-    --host $DEFAULT_IP --port $port \
+    --host $DEFAULT_IP --port $DEFAULT_PORT \
     "$@"

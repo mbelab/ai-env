@@ -16,8 +16,6 @@ model_list=$(realpath $MODEL_LIST)
 model_path=$(dirname $model_list)/'models'
 
 model="$1"
-port="$2"
-shift
 shift
 
 # handle model
@@ -30,14 +28,8 @@ then
     exit 2  # no such file or directory
 fi
 
-# handle port
-if [ -z $port ]
-then
-    port=$DEFAULT_PORT
-fi
-
 # run model as server
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file -c 0 \
-    --host $DEFAULT_IP --port $port \
+    --host $DEFAULT_IP --port $DEFAULT_PORT \
     "$@"
