@@ -18,9 +18,9 @@ Environment for local AI usage.
     $ ./bin/setup_system.sh
     $ ./bin/build_llama_cpp.sh
 
-    # Download model, run model and open WebUI (Gemma 4 E2B)
-    $ ./bin/model_mgr.sh download 'gemma-4-E2B-it-Q6_K'
-    $ ./bin/run_webui.sh 'gemma-4-E2B-it-Q6_K'
+    # Download model, run model and open WebUI (GPT-OSS-20b)
+    $ ./bin/model_mgr.sh download 'gpt-oss-20b-Q6_K'
+    $ ./bin/run_webui.sh 'gpt-oss-20b-Q6_K'
 
 The default backend is OpenBLAS.
 Performance can be massively improved by using another backend.
