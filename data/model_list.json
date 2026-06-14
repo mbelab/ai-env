@@ -5,6 +5,10 @@
         "date": "12.06.2026"
     },
     "models": {
+        "gpt-oss-20b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q6_K.gguf",
+            "type": "gguf"
+        },
         "gemma-4-E2B-it-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-Q6_K.gguf",
             "type": "gguf"
@@ -23,10 +27,6 @@
         },
         "gemma-4-31b-it-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-31B-it-GGUF/resolve/main/gemma-4-31B-it-Q6_K.gguf",
-            "type": "gguf"
-        },
-        "gpt-oss-20b-Q6_K": {
-            "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q6_K.gguf",
             "type": "gguf"
         },
         "qwen3.6-27b-Q6_K": {

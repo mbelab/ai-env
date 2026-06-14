@@ -77,6 +77,12 @@ script_name=$(basename $script)
 model_list=$(realpath $MODEL_LIST)
 model_path=$(dirname $model_list)/'models'
 
+if [[ ! -e $model_list ]]
+then
+    echo 'Model list '$model_list' not found. Abort.'
+    exit 2  # no such file or directory
+fi
+
 verb="$1"
 model="$2"
 
@@ -86,12 +92,30 @@ case $verb in
         list_models $model_list
         ;;
     'show')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         show_model $model_list $model
         ;;
     'download')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         download_model $model_list $model_path $model
         ;;
     'remove')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         remove_model $model_list $model_path $model
         ;;
     *)
@@ -99,5 +123,3 @@ case $verb in
         show_help $script_name $model_list $model_path
         ;;
 esac
-
-exit 0
