@@ -77,6 +77,12 @@ script_name=$(basename $script)
 model_list=$(realpath $MODEL_LIST)
 model_path=$(dirname $model_list)/'models'
 
+if [[ ! -e $model_list ]]
+then
+    echo 'Model list '$model_list' not found. Abort.'
+    exit 2  # no such file or directory
+fi
+
 verb="$1"
 model="$2"
 
@@ -99,5 +105,3 @@ case $verb in
         show_help $script_name $model_list $model_path
         ;;
 esac
-
-exit 0

@@ -20,10 +20,17 @@ port="$2"
 shift
 shift
 
-# handle model and port
+# handle model
 model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
 model_file=$model_path/$model'.'$model_type
 
+if [[ ! -e $model_file ]]
+then
+    echo 'Model file '$model_file' not found. Abort.'
+    exit 2  # no such file or directory
+fi
+
+# handle port
 if [ -z $port ]
 then
     port=$DEFAULT_PORT
