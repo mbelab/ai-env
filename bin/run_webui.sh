@@ -34,7 +34,8 @@ xdg-open 'http://'$DEFAULT_IP':'$port &
 
 # run model as server with WebUI
 $LLAMA_BIN_DIR/llama-server \
-    -m $model_file \
-    --jinja -c 0 --alias $model \
+    -m $model_file -c 0 \
+    --tools all \
+    --jinja --alias $model \
     --host $DEFAULT_IP --port $port \
     "$@"

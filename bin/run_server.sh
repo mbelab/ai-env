@@ -31,6 +31,6 @@ fi
 
 # run model as server
 $LLAMA_BIN_DIR/llama-server \
-    -m $model_file \
+    -m $model_file -c 0 \
     --host $DEFAULT_IP --port $port \
     "$@"
