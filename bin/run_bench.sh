@@ -27,6 +27,9 @@ then
 fi
 
 # run model in benchmark
+echo 'Run model '$model' in benchmark...'
+echo
+
 $LLAMA_BIN_DIR/llama-bench \
     -m $model_file \
     "$@"

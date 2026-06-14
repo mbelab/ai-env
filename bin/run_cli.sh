@@ -27,6 +27,9 @@ then
 fi
 
 # run model in CLI
+echo 'Run model '$model' in CLI...'
+echo
+
 $LLAMA_BIN_DIR/llama-cli \
     -m $model_file \
     "$@"

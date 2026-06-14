@@ -8,7 +8,7 @@
 MODEL_LIST='./data/model_list.json'
 LLAMA_BIN_DIR='./llama.cpp/build/bin'
 DEFAULT_IP='127.0.0.1'
-DEFAULT_PORT='8080'
+DEFAULT_PORT='9000'
 
 
 # script
@@ -29,12 +29,17 @@ then
 fi
 
 # start browser with WebUI
+echo 'Start browser for WebUI (http://'$DEFAULT_IP':'$DEFAULT_PORT')...'
+echo
+
 xdg-open 'http://'$DEFAULT_IP':'$DEFAULT_PORT &
 
 # run model as server with WebUI
+echo 'Run model '$model' as server (http://'$DEFAULT_IP':'$DEFAULT_PORT')...'
+echo
+
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file -c 0 \
-    --tools all \
-    --jinja --alias $model \
+    --jinja --tools all --alias $model \
     --host $DEFAULT_IP --port $DEFAULT_PORT \
     "$@"
