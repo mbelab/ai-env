@@ -92,12 +92,30 @@ case $verb in
         list_models $model_list
         ;;
     'show')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         show_model $model_list $model
         ;;
     'download')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         download_model $model_list $model_path $model
         ;;
     'remove')
+        if [[ -z $model ]]
+        then
+            echo 'No model provided. Abort.'
+            exit 1  # operation not permitted
+        fi
+
         remove_model $model_list $model_path $model
         ;;
     *)

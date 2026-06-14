@@ -19,6 +19,12 @@ model="$1"
 shift
 
 # handle model
+if [[ -z $model ]]
+then
+    echo 'No model provided. Abort.'
+    exit 1  # operation not permitted
+fi
+
 model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
 model_file=$model_path/$model'.'$model_type
 
