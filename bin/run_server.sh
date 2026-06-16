@@ -7,8 +7,9 @@
 # defines
 MODEL_LIST='./data/model_list.json'
 LLAMA_BIN_DIR='./llama.cpp/build/bin'
-DEFAULT_IP='127.0.0.1'
+DEFAULT_HOST='127.0.0.1'
 DEFAULT_PORT='9000'
+DEFAULT_ALIAS='ai-env'
 
 
 # script
@@ -35,12 +36,14 @@ then
 fi
 
 # run model as server
-echo 'Run model '$model' as server (http://'$DEFAULT_IP':'$DEFAULT_PORT')...'
+echo 'Run model '$model' as server with alias '$DEFAULT_ALIAS
+echo '(http://'$DEFAULT_HOST':'$DEFAULT_PORT')...'
+echo
 echo 'Press CTRL+C to stop server.'
 echo
 
 $LLAMA_BIN_DIR/llama-server \
-    -m $model_file -c 0 \
-    --jinja --tools all --alias $model \
-    --host $DEFAULT_IP --port $DEFAULT_PORT \
+    --model $model_file --alias $DEFAULT_ALIAS \
+    --ui --jinja --tools all \
+    --host $DEFAULT_HOST --port $DEFAULT_PORT \
     "$@"
