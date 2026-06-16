@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "bierner.markdown-mermaid",
+        "continue.continue",
         "davidanson.vscode-markdownlint",
         "hediet.vscode-drawio",
         "streetsidesoftware.code-spell-checker",
