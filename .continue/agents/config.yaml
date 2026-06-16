@@ -1,0 +1,19 @@
+name: Local Config
+version: 1.0.0
+schema: v1
+
+models:
+  - name: ai-env
+    provider: llama.cpp
+    model: ai-env
+    apiBase: http://127.0.0.1:9000
+    roles:
+      - chat
+      - edit
+      - apply
+      - autocomplete
+      - embed
+      - rerank
+    capabilities:
+      - tool_use
+      - image_input
