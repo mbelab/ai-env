@@ -18,9 +18,10 @@ Environment for local AI usage.
     $ ./bin/setup_system.sh
     $ ./bin/build_llama_cpp.sh
 
-    # Download model, run model and open WebUI (GPT-OSS-20b)
+    # Download model, open WebUI and run model
     $ ./bin/model_mgr.sh download 'gpt-oss-20b-Q6_K'
-    $ ./bin/run_webui.sh 'gpt-oss-20b-Q6_K'
+    $ ./bin/run_webui.sh
+    $ ./bin/run_server.sh 'gpt-oss-20b-Q6_K'
 
 The default backend is OpenBLAS.
 Performance can be massively improved by using another backend.
@@ -45,9 +46,9 @@ Scripts and tools for AI environment.
 | Script / Tool | Description |
 | ----- | ----- |
 | model_mgr.sh | Tool for simple model management |
-| run_cli.sh | Run model on CLI |
-| run_webui.sh | Run model as server with WebUI |
+| run_webui.sh | Run WebUI |
 | run_server.sh | Run model as server |
+| run_cli.sh | Run model on CLI |
 | run_bench.sh | Run model in benchmark |
 | build_llama_cpp.sh | Build llama.cpp for local usage |
 | clean_llama_cpp.sh | Clean llama.cpp build |

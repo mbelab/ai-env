@@ -36,9 +36,11 @@ fi
 
 # run model as server
 echo 'Run model '$model' as server (http://'$DEFAULT_IP':'$DEFAULT_PORT')...'
+echo 'Press CTRL+C to stop server.'
 echo
 
 $LLAMA_BIN_DIR/llama-server \
     -m $model_file -c 0 \
+    --jinja --tools all --alias $model \
     --host $DEFAULT_IP --port $DEFAULT_PORT \
     "$@"
