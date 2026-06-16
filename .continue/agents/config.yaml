@@ -4,9 +4,9 @@ schema: v1
 
 models:
   - name: ai-env
-    provider: llama.cpp
+    provider: openai
     model: ai-env
-    apiBase: http://127.0.0.1:9000
+    apiBase: http://127.0.0.1:9000/v1
     roles:
       - chat
       - edit
