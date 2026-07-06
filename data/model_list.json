@@ -2,7 +2,7 @@
     "meta": {
         "info": "AI environment model list.",
         "author": "mbelab",
-        "date": "16.06.2026"
+        "date": "06.07.2026"
     },
     "models": {
         "apertus-8b-Q6_K": {
@@ -25,7 +25,7 @@
             "type": "gguf",
             "tags": ["dense", "instruct"]
         },
-        "gemma-4-26b-A4B-^": {
+        "gemma-4-26b-A4B-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF/resolve/main/gemma-4-26B-A4B-it-UD-Q6_K.gguf",
             "type": "gguf",
             "tags": ["moe", "instruct"]
@@ -38,12 +38,27 @@
         "glm-4-9b-Q6_K": {
             "url": "https://huggingface.co/unsloth/GLM-4-9B-0414-GGUF/resolve/main/GLM-4-9B-0414-Q6_K.gguf",
             "type": "gguf",
-            "tags": ["dense"]
+            "tags": ["dense", "instruct"]
+        },
+        "glm-4-32b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/GLM-4-32B-0414-GGUF/resolve/main/GLM-4-32B-0414-Q6_K.gguf",
+            "type": "gguf",
+            "tags": ["dense", "instruct"]
+        },
+        "glm-4-z1-9b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/GLM-Z1-9B-0414-GGUF/resolve/main/GLM-Z1-9B-0414-Q6_K.gguf",
+            "type": "gguf",
+            "tags": ["dense", "reasoning"]
+        },
+        "glm-4-z1-32b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/GLM-Z1-32B-0414-GGUF/resolve/main/GLM-Z1-32B-0414-Q6_K.gguf",
+            "type": "gguf",
+            "tags": ["dense", "reasoning"]
         },
         "glm-4.7-flash-30b-A3B-Q6_K": {
             "url": "https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF/resolve/main/GLM-4.7-Flash-Q6_K.gguf",
             "type": "gguf",
-            "tags": ["moe"]
+            "tags": ["moe", "reasoning"]
         },
         "gpt-oss-20b-Q6_K": {
             "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q6_K.gguf",
@@ -78,12 +93,12 @@
         "qwen3.6-27b-Q6_K": {
             "url": "https://huggingface.co/unsloth/Qwen3.6-27B-GGUF/resolve/main/Qwen3.6-27B-Q6_K.gguf",
             "type": "gguf",
-            "tags": ["dense"]
+            "tags": ["dense", "reasoning"]
         },
         "qwen3.6-35b-A3B-Q6_K": {
             "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/resolve/main/Qwen3.6-35B-A3B-UD-Q6_K.gguf",
             "type": "gguf",
-            "tags": ["moe"]
+            "tags": ["moe", "reasoning"]
         }
     }
 }
