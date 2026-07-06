@@ -5,33 +5,38 @@
         "date": "16.06.2026"
     },
     "models": {
-        "gpt-oss-20b-Q6_K": {
-            "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q6_K.gguf",
+        "apertus-8b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/Apertus-8B-Instruct-2509-GGUF/resolve/main/Apertus-8B-Instruct-2509-Q6_K.gguf",
             "type": "gguf",
             "tags": ["dense"]
         },
-        "gemma-4-E2B-it-Q6_K": {
+        "gemma-4-E2B-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-Q6_K.gguf",
             "type": "gguf",
             "tags": ["dense"]
         },
-        "gemma-4-E4B-it-Q6_K": {
+        "gemma-4-E4B-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-E4B-it-GGUF/resolve/main/gemma-4-E4B-it-Q6_K.gguf",
             "type": "gguf",
             "tags": ["dense"]
         },
-        "gemma-4-12b-it-Q6_K": {
+        "gemma-4-12b-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-12b-it-GGUF/resolve/main/gemma-4-12b-it-Q6_K.gguf",
             "type": "gguf",
             "tags": ["dense"]
         },
-        "gemma-4-26b-A4B-it-UD-Q6_K": {
+        "gemma-4-26b-A4B-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-GGUF/resolve/main/gemma-4-26B-A4B-it-UD-Q6_K.gguf",
             "type": "gguf",
             "tags": ["moe"]
         },
-        "gemma-4-31b-it-Q6_K": {
+        "gemma-4-31b-Q6_K": {
             "url": "https://huggingface.co/unsloth/gemma-4-31B-it-GGUF/resolve/main/gemma-4-31B-it-Q6_K.gguf",
+            "type": "gguf",
+            "tags": ["dense"]
+        },
+        "gpt-oss-20b-Q6_K": {
+            "url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main/gpt-oss-20b-Q6_K.gguf",
             "type": "gguf",
             "tags": ["dense"]
         },
@@ -40,7 +45,7 @@
             "type": "gguf",
             "tags": ["dense"]
         },
-        "qwen3.6-35b-A3B-UD-Q6_K": {
+        "qwen3.6-35b-A3B-Q6_K": {
             "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF/resolve/main/Qwen3.6-35B-A3B-UD-Q6_K.gguf",
             "type": "gguf",
             "tags": ["moe"]
