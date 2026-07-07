@@ -4,15 +4,11 @@
 # mbelab
 
 
-# defines
-LLAMA_DIR='./llama.cpp'
-
-
 # script
 option="$1"
 
 # enter llama.cpp directory
-cd $LLAMA_DIR
+cd $AI_ENV_LLAMA
 
 # prepare cmake build depending on option
 if [[ $option = '--vulkan' ]]

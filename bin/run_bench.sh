@@ -4,14 +4,9 @@
 # mbelab
 
 
-# defines
-MODEL_LIST='./data/model_list.json'
-LLAMA_BIN_DIR='./llama.cpp/build/bin'
-
-
 # script
-model_list=$(realpath $MODEL_LIST)
-model_path=$(dirname $model_list)/'models'
+model_list=$AI_ENV_MODEL_LIST
+model_path=$AI_ENV_MODEL_PATH
 
 model="$1"
 shift
@@ -36,6 +31,6 @@ fi
 echo 'Run model '$model' in benchmark...'
 echo
 
-$LLAMA_BIN_DIR/llama-bench \
+$AI_ENV_LLAMA_BIN/llama-bench \
     -m $model_file \
     "$@"

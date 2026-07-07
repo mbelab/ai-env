@@ -3,6 +3,9 @@
 # private directories (also in subdirectories)
 private/
 
+# local envrc file
+.envrc_local
+
 # python and virtual environment directories (also in subdirectories)
 __pycache__/
 .venv/
