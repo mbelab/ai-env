@@ -4,9 +4,5 @@
 # mbelab
 
 
-# defines
-LLAMA_BUILD_DIR='./llama.cpp/build'
-
-
 # script
-rm -r -f $LLAMA_BUILD_DIR
+rm -r -f $AI_ENV_LLAMA_BUILD

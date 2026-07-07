@@ -4,10 +4,6 @@
 # mbelab
 
 
-# defines
-MODEL_LIST='./data/model_list.json'
-
-
 # functions
 function show_help() {
     local script_name=$1
@@ -74,8 +70,8 @@ function remove_model() {
 script=$(realpath $BASH_SOURCE)
 script_name=$(basename $script)
 
-model_list=$(realpath $MODEL_LIST)
-model_path=$(dirname $model_list)/'models'
+model_list=$AI_ENV_MODEL_LIST
+model_path=$AI_ENV_MODEL_PATH
 
 if [[ ! -e $model_list ]]
 then

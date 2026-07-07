@@ -5,16 +5,14 @@
 
 
 # defines
-MODEL_LIST='./data/model_list.json'
-LLAMA_BIN_DIR='./llama.cpp/build/bin'
 DEFAULT_HOST='127.0.0.1'
 DEFAULT_PORT='9000'
 DEFAULT_ALIAS='ai-env'
 
 
 # script
-model_list=$(realpath $MODEL_LIST)
-model_path=$(dirname $model_list)/'models'
+model_list=$AI_ENV_MODEL_LIST
+model_path=$AI_ENV_MODEL_PATH
 
 model="$1"
 shift
@@ -42,7 +40,7 @@ echo
 echo 'Press CTRL+C to stop server.'
 echo
 
-$LLAMA_BIN_DIR/llama-server \
+$AI_ENV_LLAMA_BIN/llama-server \
     --model $model_file --alias $DEFAULT_ALIAS \
     --ui --jinja --tools all \
     --host $DEFAULT_HOST --port $DEFAULT_PORT \

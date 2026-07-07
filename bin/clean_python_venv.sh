@@ -4,9 +4,5 @@
 # mbelab
 
 
-# defines
-VENV_DIR='./.venv'
-
-
 # script
-rm -r -f $VENV_DIR
+rm -r -f $AI_ENV_VENV
