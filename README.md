@@ -21,15 +21,16 @@ Environment for local AI usage.
     $ cd ai-env
     $ git checkout main
     $ git submodule update --init --recursive
+    $ source .envrc
 
     # Prepare system and build llama.cpp (default backend)
-    $ ./bin/setup_system.sh
-    $ ./bin/build_llama_cpp.sh
+    $ setup_system.sh
+    $ build_llama_cpp.sh
 
     # Download model, open WebUI and run model
-    $ ./bin/model_mgr.sh download 'gpt-oss-20b-Q6_K'
-    $ ./bin/run_webui.sh
-    $ ./bin/run_server.sh 'gpt-oss-20b-Q6_K'
+    $ model_mgr.sh download 'gpt-oss-20b-Q6_K'
+    $ run_webui.sh
+    $ run_server.sh 'gpt-oss-20b-Q6_K'
 
 ## frontend
 
@@ -69,6 +70,12 @@ Currently supported backends by this environment:
 > **Note:** *llama.cpp* implements many more backends, but not all are easy to use and supported by this environment.
 
 ## environment
+
+This environment is shell based and provides command-line scripts and tools.
+
+To prepare shell, e.g. bash, simply source the provided *.envrc* file:
+
+    $ source .envrc
 
 ### bin
 
