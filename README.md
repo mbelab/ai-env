@@ -5,8 +5,8 @@ Environment for local AI usage.
 **Maintainer:** [Michael Berghammer](mailto:info@mbelab.de)
 
 - [usage](#usage)
-- [frontend](#frontend)
 - [backend](#backend)
+- [frontend](#frontend)
 - [environment](#environment)
   - [bin](#bin)
   - [data](#data)
@@ -32,24 +32,6 @@ Environment for local AI usage.
     $ run_webui.sh
     $ run_server.sh 'gpt-oss-20b-Q6_K'
 
-## frontend
-
-Since the backend provides a common API, most existing frontend implementations can be used.
-
-Currently supported frontends by this environment:
-
-- CLI: `run_cli.sh`
-- WebUI: `run_webui.sh` / `run_server.sh`
-- VS Code / Continue: `run_server.sh`
-- Benchmark (only for test purpose): `run_bench.sh`
-
-Continue is a VS Code IDE extension for agentic usage of LLMs via different backends.
-
-A working config is provided in [config.yaml](./.continue/agents/config.yaml).
-
-This environment suggests usage of a common alias for any running model, which is then used for Continue.
-Since it is mandatory to use the model alias for Continue, one can simply run any models and Continue connects to it automatically due to the common alias `ai-env`.
-
 ## backend
 
 This environment is based on *llama.cpp*, a powerful implementation for LLM inference in C/C++ with different backend options.
@@ -68,6 +50,24 @@ Currently supported backends by this environment:
 - Vulkan (`--vulkan`, generic GPU)
 
 > **Note:** *llama.cpp* implements many more backends, but not all are easy to use and supported by this environment.
+
+## frontend
+
+Since the backend provides a common API, most existing frontend implementations can be used.
+
+Currently supported frontends by this environment:
+
+- CLI: `run_cli.sh`
+- WebUI: `run_webui.sh`
+- Benchmark (only for test purpose): `run_bench.sh`
+- VS Code / Continue
+
+Continue is a VS Code IDE extension for agentic usage of LLMs via different backends.
+
+A working config is provided in [config.yaml](./.continue/agents/config.yaml).
+
+This environment suggests usage of a common alias for any running model, which is then used for Continue.
+Since it is mandatory to use the model alias for Continue, one can simply run any models and Continue connects to it automatically due to the common alias `ai-env`.
 
 ## environment
 
