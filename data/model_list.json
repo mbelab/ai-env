@@ -71,19 +71,19 @@
             "mmproj_file": "",
             "tags": ["dense"]
         },
-        "ministral-3-reasoning-3b-Q6_K": {
+        "ministral-3-3b-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/Ministral-3-3B-Reasoning-2512-GGUF/resolve/main/",
             "model_file": "Ministral-3-3B-Reasoning-2512-Q6_K.gguf",
             "mmproj_file": "mmproj-BF16.gguf",
             "tags": ["dense", "reasoning", "vision"]
         },
-        "ministral-3-reasoning-8b-Q6_K": {
+        "ministral-3-8b-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/Ministral-3-8B-Reasoning-2512-GGUF/resolve/main/",
             "model_file": "Ministral-3-8B-Reasoning-2512-Q6_K.gguf",
             "mmproj_file": "mmproj-BF16.gguf",
             "tags": ["dense", "reasoning", "vision"]
         },
-        "ministral-3-reasoning-14b-Q6_K": {
+        "ministral-3-14b-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/Ministral-3-14B-Reasoning-2512-GGUF/resolve/main/",
             "model_file": "Ministral-3-14B-Reasoning-2512-Q6_K.gguf",
             "mmproj_file": "mmproj-BF16.gguf",
