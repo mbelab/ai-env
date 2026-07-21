@@ -7,16 +7,19 @@
 # script
 option="$1"
 
-# enter llama.cpp directory
-cd $AI_ENV_LLAMA
+# prepare build options
+build_options=(
+    -DGGML_BLAS=ON
+    -DGGML_BLAS_VENDOR=OpenBLAS
+    -DCMAKE_C_FLAGS="-march=native"
+    -DCMAKE_CXX_FLAGS="-march=native"
+)
 
-# prepare cmake build depending on option
 if [[ $option = '--vulkan' ]]
 then
-    cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS -DGGML_VULKAN=ON
-else
-    cmake -B build -DGGML_BLAS=ON -DGGML_BLAS_VENDOR=OpenBLAS
+    build_options+=(-DGGML_VULKAN=ON)
 fi
 
 # build llama.cpp
-cmake --build build --config Release -j
+cmake -S $AI_ENV_LLAMA -B $AI_ENV_LLAMA_BUILD "${build_options[@]}"
+cmake --build $AI_ENV_LLAMA_BUILD --config Release -j
