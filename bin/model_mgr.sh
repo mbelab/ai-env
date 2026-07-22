@@ -17,6 +17,7 @@ function show_help() {
     echo 'Verbs:'
     echo '    help               Show this help'
     echo '    list               List models'
+    echo '    list-local         List local models'
     echo '    show               Show [model] information'
     echo '    download           Download [model]'
     echo '    remove             Remove [model]'
@@ -32,6 +33,15 @@ function list_models() {
     local model_list=$1
 
     jq -r '.models | keys[]' $model_list
+}
+
+function list_local_models() {
+    local model_path=$1
+
+    for model in $model_path/*
+    do
+        echo ${model/$model_path'/'/}
+    done
 }
 
 function show_model() {
@@ -87,6 +97,9 @@ model="$2"
 case $verb in
     'list')
         list_models $model_list
+        ;;
+    'list-local')
+        list_local_models $model_path
         ;;
     'show')
         if [[ -z $model ]]
