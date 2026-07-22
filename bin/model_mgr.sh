@@ -46,23 +46,24 @@ function download_model() {
     local model_path=$2
     local model=$3
 
-    local model_url=$(jq -r --arg model $model '.models[$model].url' $model_list)
-    local model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
-    local model_file=$model_path/$model'.'$model_type
+    local base_url=$(jq -r --arg model $model '.models[$model].base_url' $model_list)
+    local model_file=$(jq -r --arg model $model '.models[$model].model_file' $model_list)
+    local mmproj_file=$(jq -r --arg model $model '.models[$model].mmproj_file' $model_list)
 
-    mkdir -p $model_path
-    wget -q --show-progress -O $model_file $model_url
+    mkdir -p $model_path/$model
+    wget -q --show-progress -O $model_path/$model/$model_file $base_url/$model_file
+
+    if [[ ! -z $mmproj_file ]]
+    then
+        wget -q --show-progress -O $model_path/$model/$mmproj_file $base_url/$mmproj_file
+    fi
 }
 
 function remove_model() {
-    local model_list=$1
-    local model_path=$2
-    local model=$3
+    local model_path=$1
+    local model=$2
 
-    local model_type=$(jq -r --arg model $model '.models[$model].type' $model_list)
-    local model_file=$model_path/$model'.'$model_type
-
-    rm -r -f $model_file
+    rm -r -f $model_path/$model*
 }
 
 
@@ -112,7 +113,7 @@ case $verb in
             exit 1  # operation not permitted
         fi
 
-        remove_model $model_list $model_path $model
+        remove_model $model_path $model
         ;;
     *)
         # no valid verb / help
