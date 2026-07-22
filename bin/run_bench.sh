@@ -26,10 +26,13 @@ then
     exit 2  # no such file or directory
 fi
 
+# prepare run options
+run_options=(
+    --model $model_path/$model/$model_file
+)
+
 # run model in benchmark
 echo 'Run model '$model' in benchmark...'
 echo
 
-$AI_ENV_LLAMA_BIN/llama-bench \
-    -m $model_path/$model/$model_file \
-    "$@"
+$AI_ENV_LLAMA_BIN/llama-bench "${run_options[@]}" "$@"
