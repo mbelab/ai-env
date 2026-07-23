@@ -29,3 +29,10 @@ if [[ $option = '--vulkan' ]]
 then
     sudo apt-get install -y libvulkan-dev glslc spirv-headers
 fi
+
+# print CUDA information
+if [[ $option = '--cuda' ]]
+then
+    echo 'CUDA is not installed automatically.'
+    echo 'Please install it according to your distribution guidelines.'
+fi

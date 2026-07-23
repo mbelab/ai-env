@@ -20,6 +20,11 @@ then
     build_options+=(-DGGML_VULKAN=ON)
 fi
 
+if [[ $option = '--cuda' ]]
+then
+    build_options+=(-DGGML_CUDA=ON)
+fi
+
 # build llama-cpp-python
 export CMAKE_ARGS="${build_options[*]}"
 pip install llama-cpp-python --force-reinstall --no-cache-dir --no-warn-script-location

@@ -20,6 +20,11 @@ then
     build_options+=(-DGGML_VULKAN=ON)
 fi
 
+if [[ $option = '--cuda' ]]
+then
+    build_options+=(-DGGML_CUDA=ON)
+fi
+
 # build llama.cpp
 cmake -S $AI_ENV_LLAMA -B $AI_ENV_LLAMA_BUILD "${build_options[@]}"
 cmake --build $AI_ENV_LLAMA_BUILD --config Release -j

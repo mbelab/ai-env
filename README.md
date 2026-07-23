@@ -36,7 +36,7 @@ Environment for local AI usage.
 
 This environment is based on *llama.cpp*, a powerful implementation for LLM inference in C/C++ with different backend options.
 
-The suggested default backend by this environment is OpenBLAS (generic CPU).
+The suggested and always active default backend by this environment is OpenBLAS (generic CPU).
 
 To use other backends, one can add the corresponding flag to scripts:
 
@@ -48,6 +48,7 @@ Currently supported backends by this environment:
 
 - OpenBLAS (default, generic CPU)
 - Vulkan (`--vulkan`, generic GPU)
+- CUDA (`--cuda`, NVIDIA GPU)
 
 > **Note:** *llama.cpp* implements many more backends, but not all are easy to use and supported by this environment.
 
