@@ -86,8 +86,8 @@ Scripts and tools for AI environment.
 | ----- | ----- |
 | `model_mgr.sh` | Tool for simple model management |
 | `run_webui.sh` | Run WebUI |
-| `run_server.sh` | Run model as server |
-| `run_cli.sh` | Run model on CLI |
+| `run_server.sh` | Run server in router mode or with dedicated model |
+| `run_cli.sh` | Run model in CLI |
 | `run_bench.sh` | Run model in benchmark |
 | `build_llama_cpp.sh` | Build llama.cpp for local usage |
 | `clean_llama_cpp.sh` | Clean llama.cpp build |
