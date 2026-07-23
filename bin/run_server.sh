@@ -5,8 +5,6 @@
 
 
 # defines
-DEFAULT_HOST='127.0.0.1'
-DEFAULT_PORT='9000'
 DEFAULT_ALIAS='ai-env'
 
 
@@ -14,12 +12,17 @@ DEFAULT_ALIAS='ai-env'
 model_list=$AI_ENV_MODEL_LIST
 model_path=$AI_ENV_MODEL_PATH
 
+api_base_temp=${OPENAI_API_BASE#*//}
+api_base_temp=${api_base_temp%%/*}
+host=${api_base_temp%%:*}
+port=${api_base_temp#*:}
+
 model="$1"
 
 # prepare run options
 run_options=(
-    --host $DEFAULT_HOST
-    --port $DEFAULT_PORT
+    --host $host
+    --port $port
     --ui
     --jinja
     --tools all
@@ -62,7 +65,7 @@ else
 fi
 
 # run model as server
-echo '(http://'$DEFAULT_HOST':'$DEFAULT_PORT')'
+echo '(http://'$host':'$port')'
 echo
 echo 'Press CTRL+C to stop server.'
 echo

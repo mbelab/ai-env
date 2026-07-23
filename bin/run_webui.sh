@@ -4,13 +4,13 @@
 # mbelab
 
 
-# defines
-DEFAULT_HOST='127.0.0.1'
-DEFAULT_PORT='9000'
-
-
 # script
-echo 'Start browser for WebUI (http://'$DEFAULT_HOST':'$DEFAULT_PORT')...'
+api_base_temp=${OPENAI_API_BASE#*//}
+api_base_temp=${api_base_temp%%/*}
+host=${api_base_temp%%:*}
+port=${api_base_temp#*:}
+
+echo 'Start browser for WebUI (http://'$host':'$port')...'
 echo
 
-xdg-open 'http://'$DEFAULT_HOST':'$DEFAULT_PORT &
+xdg-open 'http://'$host':'$port &
