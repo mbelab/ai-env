@@ -1,0 +1,92 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "auto_collapse_reasoning": true,
+  "terminal_command_display": "expanded",
+  "permission": {
+    "read": {
+      "*": "allow",
+      "*.env": "ask",
+      "*.env.*": "ask",
+      "*.env.example": "allow"
+    },
+    "edit": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "bash": {
+      "*": "ask",
+      "cat *": "allow",
+      "head *": "allow",
+      "tail *": "allow",
+      "less *": "allow",
+      "ls *": "allow",
+      "tree *": "allow",
+      "pwd *": "allow",
+      "echo *": "allow",
+      "wc *": "allow",
+      "which *": "allow",
+      "type *": "allow",
+      "file *": "allow",
+      "diff *": "allow",
+      "du *": "allow",
+      "df *": "allow",
+      "date *": "allow",
+      "uname *": "allow",
+      "whoami *": "allow",
+      "printenv *": "allow",
+      "man *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "ag *": "allow",
+      "uniq *": "allow",
+      "cut *": "allow",
+      "tr *": "allow",
+      "jq *": "allow",
+      "*>*": "ask"
+    },
+    "external_directory": "ask",
+    "question": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "doom_loop": "ask",
+    "*": "ask",
+    "codesearch": "allow",
+    "task": "ask",
+    "skill": "ask",
+    "lsp": "ask",
+    "todoread": "ask",
+    "todowrite": "ask"
+  },
+  "compaction": {
+    "threshold_percent": 60
+  },
+  "default_agent": "ask",
+  "disabled_providers": [],
+  "provider": {
+    "ai-env": {
+      "name": "ai-env",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://127.0.0.1:9000/v1"
+      },
+      "models": {
+        "ai-env": {
+          "name": "ai-env",
+          "reasoning": true,
+          "modalities": {
+            "input": [
+              "text",
+              "image"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "model": "ai-env/ai-env",
+  "agent": {
+    "orchestrator": {
+      "disable": true
+    }
+  }
+}
