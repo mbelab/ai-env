@@ -34,7 +34,7 @@ Environment for local AI usage.
 
 ## backend
 
-This environment is based on *llama.cpp*, a powerful implementation for LLM inference in C/C++ with different backend options.
+This environment is based on **llama.cpp**, a powerful implementation for LLM inference in C/C++ with different backend options.
 
 The suggested and always active default backend by this environment is OpenBLAS (generic CPU).
 
@@ -50,25 +50,28 @@ Currently supported backends by this environment:
 - Vulkan (`--vulkan`, generic GPU)
 - CUDA (`--cuda`, NVIDIA GPU)
 
-> **Note:** *llama.cpp* implements many more backends, but not all are easy to use and supported by this environment.
+> **Note:** **llama.cpp** implements many more backends, but not all are easy to use and supported by this environment.
 
 ## frontend
 
 Since the backend provides a common API, most existing frontend implementations can be used.
+There are several frontend supported by this environment.
 
-Currently supported frontends by this environment:
+**llama.cpp** native/included:
 
-- CLI: `run_cli.sh`
-- WebUI: `run_webui.sh`
-- Benchmark (only for test purpose): `run_bench.sh`
-- VS Code / Continue
+- llama-cli (cli chat): `run_cli.sh`
+- llama-ui (web ui): `run_webui.sh`
+- llama-bench (benchmark): `run_bench.sh`
 
-Continue is a VS Code IDE extension for agentic usage of LLMs via different backends.
+Additional frontends:
 
-A working config is provided in [config.yaml](./.continue/agents/config.yaml).
+- [Continue](https://continue.dev) (VS Code extension, deprecated)
+- [Kilo Code](https://kilo.ai) (VS Code extension and CLI agent)
 
-This environment suggests usage of a common alias for any running model, which is then used for Continue.
-Since it is mandatory to use the model alias for Continue, one can simply run any models and Continue connects to it automatically due to the common alias `ai-env`.
+Working configs are provided in *.continue* and *.kilo*.
+
+This environment suggests usage of a common alias for any running model, which is then used for Continue/Kilo.
+Since it is mandatory to use the model alias, one can simply run any models and Continue/Kilo connects to it automatically due to the common alias `ai-env`.
 
 ## environment
 
