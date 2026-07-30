@@ -4,10 +4,6 @@
 # mbelab
 
 
-# defines
-DEFAULT_ALIAS='ai-env'
-
-
 # script
 model_list=$AI_ENV_MODEL_LIST
 model_path=$AI_ENV_MODEL_PATH
@@ -54,7 +50,7 @@ else
 
     run_options+=(
         --model $model_path/$model/$model_file
-        --alias $DEFAULT_ALIAS
+        --alias $AI_ENV_MODEL_ALIAS
     )
 
     if [[ ! -z $mmproj_file ]]
@@ -62,7 +58,7 @@ else
         run_options+=(--mmproj $model_path/$model/$mmproj_file)
     fi
 
-    echo 'Run server with model '$model' as '$DEFAULT_ALIAS'...'
+    echo 'Run server with model '$model' as '$AI_ENV_MODEL_ALIAS'...'
 fi
 
 # run model as server

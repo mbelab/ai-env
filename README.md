@@ -67,6 +67,7 @@ Additional frontends:
 
 - [Continue](https://continue.dev) (VS Code extension, deprecated)
 - [Kilo Code](https://kilo.ai) (VS Code extension and CLI agent)
+- [OpenCode](https://opencode.ai) (Standalone AI-Coding-Agent)
 
 Working configs are provided in *.continue* and *.kilo*.
 
@@ -92,6 +93,7 @@ Scripts and tools for AI environment.
 | `run_server.sh` | Run server in router mode or with dedicated model |
 | `run_cli.sh` | Run model in CLI |
 | `run_bench.sh` | Run model in benchmark |
+| `get_opencode.sh` | Download OpenCode AppImage |
 | `build_llama_cpp.sh` | Build llama.cpp for local usage |
 | `clean_llama_cpp.sh` | Clean llama.cpp build |
 | `setup_system.sh` | Setup script for system packages (apt) |
