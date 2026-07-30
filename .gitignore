@@ -3,13 +3,19 @@
 # private directories (also in subdirectories)
 private/
 
-# local envrc file
-.envrc_local
-
 # python and virtual environment directories (also in subdirectories)
 __pycache__/
 .venv/
 
+# local envrc file
+.envrc_local
+
+# local model list file
+data/model_list_local.json
+
 # content of data/models directory (except .gitkeep)
 data/models/*
 !data/models/.gitkeep
+
+# downloaded executables in bin
+bin/opencode.AppImage
