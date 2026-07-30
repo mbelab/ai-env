@@ -26,6 +26,7 @@ run_options=(
     --ui
     --jinja
     --tools all
+    --cpu-moe
 )
 
 # handle model
