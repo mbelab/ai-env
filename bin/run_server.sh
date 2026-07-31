@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Run model as server script
+# Run server script
 # mbelab
 
 
@@ -22,16 +22,17 @@ run_options=(
     --ui
     --jinja
     --tools all
-    --cpu-moe
 )
 
 # handle model
 if [[ -z $model ]]
 then
     # start server in router mode
+    # this includes CPU offloading for MoE models and MTP
     run_options+=(
         --models-dir $model_path
         --no-models-autoload
+        --cpu-moe
     )
 
     echo 'Run server in router mode...'
@@ -61,7 +62,7 @@ else
     echo 'Run server with model '$model' as '$AI_ENV_MODEL_ALIAS'...'
 fi
 
-# run model as server
+# run server
 echo '(http://'$host':'$port')'
 echo
 echo 'Press CTRL+C to stop server.'

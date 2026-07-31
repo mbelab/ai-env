@@ -30,7 +30,6 @@ fi
 # prepare run options
 run_options=(
     --model $model_path/$model/$model_file
-    --cpu-moe
 )
 
 if [[ ! -z $mmproj_file ]]
