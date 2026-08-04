@@ -88,5 +88,6 @@
     "orchestrator": {
       "disable": true
     }
-  }
+  },
+  "web_search": true
 }
