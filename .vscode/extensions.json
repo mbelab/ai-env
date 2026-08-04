@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "bierner.markdown-mermaid",
-        "continue.continue",
         "davidanson.vscode-markdownlint",
         "hediet.vscode-drawio",
         "kilocode.kilo-code",
