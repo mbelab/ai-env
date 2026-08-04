@@ -65,14 +65,11 @@ There are several frontend supported by this environment.
 
 Additional frontends:
 
-- [Continue](https://continue.dev) (VS Code extension, deprecated)
 - [Kilo Code](https://kilo.ai) (VS Code extension and CLI agent)
 - [OpenCode](https://opencode.ai) (Standalone AI-Coding-Agent)
 
-Working configs are provided in *.continue* and *.kilo*.
-
-This environment suggests usage of a common alias for any running model, which is then used for Continue/Kilo.
-Since it is mandatory to use the model alias, one can simply run any models and Continue/Kilo connects to it automatically due to the common alias `ai-env`.
+This environment suggests usage of a common alias for any running model, which is then used for e.g. Kilo Code.
+Since it is mandatory to use the model alias, one can simply run any models and Kilo Code connects to it automatically due to the common alias `ai-env`.
 
 ## environment
 
