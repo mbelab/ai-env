@@ -9,11 +9,15 @@ option="$1"
 
 # prepare build options
 build_options=(
-    -DGGML_BLAS=ON
-    -DGGML_BLAS_VENDOR=OpenBLAS
     -DCMAKE_C_FLAGS="-march=native"
     -DCMAKE_CXX_FLAGS="-march=native"
 )
+
+if [[ $option = '--openblas' ]]
+then
+    build_options+=(-DGGML_BLAS=ON)
+    build_options+=(-DGGML_BLAS_VENDOR=OpenBLAS)
+fi
 
 if [[ $option = '--vulkan' ]]
 then

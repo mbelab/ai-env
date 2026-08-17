@@ -35,10 +35,9 @@ Environment for local AI usage.
 ## backend
 
 This environment is based on **llama.cpp**, a powerful implementation for LLM inference in C/C++ with different backend options.
+It natively supports an optimized CPU backend, which is especially great for quantized models.
 
-The suggested and always active default backend by this environment is OpenBLAS (generic CPU).
-
-To use other backends, one can add the corresponding flag to scripts:
+To use other backends e.g. with GPU support, one can add the corresponding flag to scripts:
 
 - `setup_system.sh`
 - `build_llama_cpp.sh`
@@ -46,7 +45,8 @@ To use other backends, one can add the corresponding flag to scripts:
 
 Currently supported backends by this environment:
 
-- OpenBLAS (default, generic CPU)
+- Native-CPU (default, generic CPU)
+- OpenBLAS (`--openblas`, generic CPU)
 - Vulkan (`--vulkan`, generic GPU)
 - CUDA (`--cuda`, NVIDIA GPU)
 

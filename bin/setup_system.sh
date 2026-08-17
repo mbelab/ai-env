@@ -21,8 +21,11 @@ sudo apt-get install -y python3 python3-venv python3-pip
 # install OpenSSL packages
 sudo apt-get install -y libssl-dev
 
-# install OpenBLAS packages
-sudo apt-get install -y libopenblas-dev
+# install OpenBLAS packages depending on option
+if [[ $option = '--openblas' ]]
+then
+    sudo apt-get install -y libopenblas-dev
+fi
 
 # install Vulkan packages depending on option
 if [[ $option = '--vulkan' ]]
