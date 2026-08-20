@@ -65,6 +65,12 @@
             "mmproj_file": "",
             "tags": ["moe", "reasoning"]
         },
+        "gpt-oss-safeguard-20b-Q6_K": {
+            "base_url": "https://huggingface.co/unsloth/gpt-oss-safeguard-20b-GGUF/resolve/main",
+            "model_file": "gpt-oss-safeguard-20b-Q6_K.gguf",
+            "mmproj_file": "",
+            "tags": ["moe", "reasoning"]
+        },
         "ministral-3-3b-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/Ministral-3-3B-Instruct-2512-GGUF/resolve/main",
             "model_file": "Ministral-3-3B-Instruct-2512-Q6_K.gguf",
