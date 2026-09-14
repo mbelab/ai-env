@@ -17,5 +17,9 @@ data/model_list_local.json
 data/models/*
 !data/models/.gitkeep
 
+# content of work directory (except .gitkeep)
+work/*
+!work/.gitkeep
+
 # downloaded executables in bin
 bin/opencode.AppImage

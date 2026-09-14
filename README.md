@@ -10,6 +10,7 @@ Environment for local AI usage.
 - [environment](#environment)
   - [bin](#bin)
   - [data](#data)
+  - [work](#work)
   - [llama.cpp](#llamacpp)
 
 > **Note:** Files in subdirectories named *private* are not tracked by Git.
@@ -109,6 +110,12 @@ A curated list of models, usable with scripts in *bin*.
 #### models
 
 Directory for AI model files in e.g. `gguf` format.
+
+> **Note:** Files in this directory except *.gitkeep* are ignored by Git.
+
+### work
+
+Workspace of AI environment.
 
 > **Note:** Files in this directory except *.gitkeep* are ignored by Git.
 
