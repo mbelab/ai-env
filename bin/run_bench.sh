@@ -8,7 +8,7 @@
 model_list=$AI_ENV_MODEL_LIST
 model_path=$AI_ENV_MODEL_PATH
 
-model="$1"
+model=$(basename "$1")
 shift
 
 # handle model

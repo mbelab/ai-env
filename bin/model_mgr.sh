@@ -91,7 +91,7 @@ then
 fi
 
 verb="$1"
-model="$2"
+model=$(basename "$2")
 
 # handle verb
 case $verb in

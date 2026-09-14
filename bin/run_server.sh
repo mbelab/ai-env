@@ -13,7 +13,7 @@ api_base_temp=${api_base_temp%%/*}
 host=${api_base_temp%%:*}
 port=${api_base_temp#*:}
 
-model="$1"
+model=$(basename "$1")
 
 # prepare run options
 run_options=(
