@@ -2,7 +2,7 @@
     "meta": {
         "info": "AI environment model list.",
         "author": "mbelab",
-        "date": "31.07.2026"
+        "date": "22.09.2026"
     },
     "models": {
         "apertus-8b-Q6_K": {
@@ -40,18 +40,6 @@
             "model_file": "gemma-4-31B-it-Q6_K.gguf",
             "mmproj_file": "mmproj-BF16.gguf",
             "tags": ["dense", "reasoning", "vision"]
-        },
-        "glm-4-z1-9b-Q6_K": {
-            "base_url": "https://huggingface.co/unsloth/GLM-Z1-9B-0414-GGUF/resolve/main",
-            "model_file": "GLM-Z1-9B-0414-Q6_K.gguf",
-            "mmproj_file": "",
-            "tags": ["dense", "reasoning"]
-        },
-        "glm-4-z1-32b-Q6_K": {
-            "base_url": "https://huggingface.co/unsloth/GLM-Z1-32B-0414-GGUF/resolve/main",
-            "model_file": "GLM-Z1-32B-0414-Q6_K.gguf",
-            "mmproj_file": "",
-            "tags": ["dense", "reasoning"]
         },
         "glm-4.7-flash-30b-A3B-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF/resolve/main",
