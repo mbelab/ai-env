@@ -8,17 +8,12 @@
 model_list=$AI_ENV_MODEL_LIST
 model_path=$AI_ENV_MODEL_PATH
 
-api_base_temp=${OPENAI_API_BASE#*//}
-api_base_temp=${api_base_temp%%/*}
-host=${api_base_temp%%:*}
-port=${api_base_temp#*:}
-
 model=$(basename "$1")
 
 # prepare run options
 run_options=(
-    --host $host
-    --port $port
+    --host $AI_ENV_SERVER_HOST
+    --port $AI_ENV_SERVER_PORT
     --ui
     --jinja
     --tools all
@@ -65,7 +60,7 @@ else
 fi
 
 # run server
-echo '(http://'$host':'$port')'
+echo '(http://'$AI_ENV_SERVER_HOST':'$AI_ENV_SERVER_PORT')'
 echo
 echo 'Press CTRL+C to stop server.'
 echo

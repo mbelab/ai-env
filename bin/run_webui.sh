@@ -5,12 +5,7 @@
 
 
 # script
-api_base_temp=${OPENAI_API_BASE#*//}
-api_base_temp=${api_base_temp%%/*}
-host=${api_base_temp%%:*}
-port=${api_base_temp#*:}
-
-echo 'Start browser for WebUI (http://'$host':'$port')...'
+echo 'Start browser for WebUI (http://'$AI_ENV_SERVER_HOST':'$AI_ENV_SERVER_PORT')...'
 echo
 
-xdg-open 'http://'$host':'$port &
+xdg-open 'http://'$AI_ENV_SERVER_HOST':'$AI_ENV_SERVER_PORT &
