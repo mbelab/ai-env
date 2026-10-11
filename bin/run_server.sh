@@ -8,11 +8,12 @@
 model_list=$AI_ENV_MODEL_LIST
 model_path=$AI_ENV_MODEL_PATH
 
+host='0.0.0.0'
 model=$(basename "$1")
 
 # prepare run options
 run_options=(
-    --host $AI_ENV_SERVER_HOST
+    --host $host
     --port $AI_ENV_SERVER_PORT
     --ui
     --jinja
