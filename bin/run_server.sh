@@ -17,7 +17,6 @@ run_options=(
     --port $AI_ENV_SERVER_PORT
     --ui
     --jinja
-    # --tools all
 )
 
 # handle model
@@ -28,9 +27,7 @@ then
     run_options+=(
         --models-dir $model_path
         --no-models-autoload
-        # --cpu-moe
-        # --spec-type draft-mtp
-        # --spec-draft-n-max 2
+        --ctx-size $AI_ENV_MODEL_ROUTER_CONTEXT_SIZE
     )
 
     echo 'Run server in router mode...'
