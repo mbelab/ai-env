@@ -17,7 +17,7 @@ run_options=(
     --port $AI_ENV_SERVER_PORT
     --ui
     --jinja
-    --tools all
+    # --tools all
 )
 
 # handle model
