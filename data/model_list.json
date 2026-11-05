@@ -41,21 +41,9 @@
             "mmproj_file": "mmproj-BF16.gguf",
             "tags": ["dense", "reasoning", "vision"]
         },
-        "glm-4.7-flash-30b-A3B-Q6_K": {
-            "base_url": "https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF/resolve/main",
-            "model_file": "GLM-4.7-Flash-Q6_K.gguf",
-            "mmproj_file": "",
-            "tags": ["moe", "reasoning"]
-        },
         "gpt-oss-20b-Q6_K": {
             "base_url": "https://huggingface.co/unsloth/gpt-oss-20b-GGUF/resolve/main",
             "model_file": "gpt-oss-20b-Q6_K.gguf",
-            "mmproj_file": "",
-            "tags": ["moe", "reasoning"]
-        },
-        "gpt-oss-safeguard-20b-Q6_K": {
-            "base_url": "https://huggingface.co/unsloth/gpt-oss-safeguard-20b-GGUF/resolve/main",
-            "model_file": "gpt-oss-safeguard-20b-Q6_K.gguf",
             "mmproj_file": "",
             "tags": ["moe", "reasoning"]
         },
